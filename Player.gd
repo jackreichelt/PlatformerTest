@@ -1,7 +1,7 @@
 extends Area2D
 
 var currentV = Vector2()
-var maxSpeed = 300
+var maxSpeed = 10
 var accel = 50
 var decel = 50
 var screen_size
@@ -46,7 +46,7 @@ func run(delta):
     else:
       currentV = newV
     
-  currentV = currentV.clamped(10)
+  currentV = currentV.clamped(maxSpeed)
   
   if currentV.length() > 0:
     $AnimatedSprite.animation = 'run'
