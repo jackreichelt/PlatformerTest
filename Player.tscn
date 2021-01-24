@@ -7,20 +7,20 @@
 [ext_resource path="res://PlayerSprites/adventurer-jump-01.png" type="Texture" id=5]
 [ext_resource path="res://PlayerSprites/adventurer-jump-02.png" type="Texture" id=6]
 [ext_resource path="res://PlayerSprites/adventurer-jump-03.png" type="Texture" id=7]
-[ext_resource path="res://PlayerSprites/adventurer-idle-03.png" type="Texture" id=8]
-[ext_resource path="res://PlayerSprites/adventurer-run-00.png" type="Texture" id=9]
-[ext_resource path="res://PlayerSprites/adventurer-run-01.png" type="Texture" id=10]
-[ext_resource path="res://PlayerSprites/adventurer-run-02.png" type="Texture" id=11]
-[ext_resource path="res://PlayerSprites/adventurer-run-03.png" type="Texture" id=12]
-[ext_resource path="res://PlayerSprites/adventurer-run-04.png" type="Texture" id=13]
-[ext_resource path="res://PlayerSprites/adventurer-fall-01.png" type="Texture" id=14]
-[ext_resource path="res://PlayerSprites/adventurer-run-05.png" type="Texture" id=15]
-[ext_resource path="res://PlayerSprites/adventurer-fall-00.png" type="Texture" id=16]
-[ext_resource path="res://PlayerSprites/Player.gd" type="Script" id=17]
+[ext_resource path="res://Player.gd" type="Script" id=8]
+[ext_resource path="res://PlayerSprites/adventurer-idle-03.png" type="Texture" id=9]
+[ext_resource path="res://PlayerSprites/adventurer-run-00.png" type="Texture" id=10]
+[ext_resource path="res://PlayerSprites/adventurer-run-01.png" type="Texture" id=11]
+[ext_resource path="res://PlayerSprites/adventurer-run-02.png" type="Texture" id=12]
+[ext_resource path="res://PlayerSprites/adventurer-run-03.png" type="Texture" id=13]
+[ext_resource path="res://PlayerSprites/adventurer-run-04.png" type="Texture" id=14]
+[ext_resource path="res://PlayerSprites/adventurer-fall-01.png" type="Texture" id=15]
+[ext_resource path="res://PlayerSprites/adventurer-run-05.png" type="Texture" id=16]
+[ext_resource path="res://PlayerSprites/adventurer-fall-00.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "idle",
 "speed": 4.0
@@ -30,12 +30,12 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "run",
 "speed": 6.0
@@ -47,7 +47,7 @@ height = 28.1182
 
 [node name="Player" type="Area2D"]
 position = Vector2( 69.2618, 58.1866 )
-script = ExtResource( 17 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -57,7 +57,7 @@ position = Vector2( 0, 0.5 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
